@@ -194,5 +194,10 @@ namespace AccountingCurrencyTransactions
 
             if (textBox1.Text.Length > 0) setSumm();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Saver.Save(dataGridView1);
+        }
     }
 }

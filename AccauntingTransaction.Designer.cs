@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.currencyYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accountingCurrencyTransactionsDataSet = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,23 +41,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.accountingCurrencyTransactionsDataSet = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet();
-            this.accountingForTransactionsYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountingForTransactionsYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.AccountingForTransactionsYMTableAdapter();
-            this.currencyYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.currencyYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.currencyYMTableAdapter();
-            this.typeOperationYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeOperationYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.typeOperationYMTableAdapter();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.courseYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.CourseYMTableAdapter();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currencyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratioToTheDollarUnitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,10 +49,26 @@
             this.typeOperationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.summDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountingCurrencyTransactionsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountingForTransactionsYMBindingSource)).BeginInit();
+            this.accountingForTransactionsYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.typeOperationYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.accountingForTransactionsYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.AccountingForTransactionsYMTableAdapter();
+            this.currencyYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.currencyYMTableAdapter();
+            this.typeOperationYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.typeOperationYMTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratioToTheDollarUnitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseYMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courseYMTableAdapter = new AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.CourseYMTableAdapter();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.currencyYMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountingCurrencyTransactionsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountingForTransactionsYMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeOperationYMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseYMBindingSource)).BeginInit();
@@ -85,6 +86,16 @@
             this.comboBox1.TabIndex = 27;
             this.comboBox1.ValueMember = "id";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // currencyYMBindingSource
+            // 
+            this.currencyYMBindingSource.DataMember = "currencyYM";
+            this.currencyYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
+            // 
+            // accountingCurrencyTransactionsDataSet
+            // 
+            this.accountingCurrencyTransactionsDataSet.DataSetName = "AccountingCurrencyTransactionsDataSet";
+            this.accountingCurrencyTransactionsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -187,124 +198,6 @@
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
-            // comboBox2
-            // 
-            this.comboBox2.DataSource = this.typeOperationYMBindingSource;
-            this.comboBox2.DisplayMember = "name";
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(96, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 32;
-            this.comboBox2.ValueMember = "id";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Операция";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Всего (в $)";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(96, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
-            this.textBox2.TabIndex = 33;
-            // 
-            // accountingCurrencyTransactionsDataSet
-            // 
-            this.accountingCurrencyTransactionsDataSet.DataSetName = "AccountingCurrencyTransactionsDataSet";
-            this.accountingCurrencyTransactionsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountingForTransactionsYMBindingSource
-            // 
-            this.accountingForTransactionsYMBindingSource.DataMember = "AccountingForTransactionsYM";
-            this.accountingForTransactionsYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
-            // 
-            // accountingForTransactionsYMTableAdapter
-            // 
-            this.accountingForTransactionsYMTableAdapter.ClearBeforeFill = true;
-            // 
-            // currencyYMBindingSource
-            // 
-            this.currencyYMBindingSource.DataMember = "currencyYM";
-            this.currencyYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
-            // 
-            // currencyYMTableAdapter
-            // 
-            this.currencyYMTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeOperationYMBindingSource
-            // 
-            this.typeOperationYMBindingSource.DataMember = "typeOperationYM";
-            this.typeOperationYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
-            // 
-            // typeOperationYMTableAdapter
-            // 
-            this.typeOperationYMTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.currencyDataGridViewTextBoxColumn1,
-            this.ratioToTheDollarUnitDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.courseYMBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 233);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(210, 136);
-            this.dataGridView2.TabIndex = 35;
-            this.dataGridView2.Visible = false;
-            // 
-            // courseYMBindingSource
-            // 
-            this.courseYMBindingSource.DataMember = "CourseYM";
-            this.courseYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
-            // 
-            // courseYMTableAdapter
-            // 
-            this.courseYMTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // currencyDataGridViewTextBoxColumn1
-            // 
-            this.currencyDataGridViewTextBoxColumn1.DataPropertyName = "currency";
-            this.currencyDataGridViewTextBoxColumn1.HeaderText = "currency";
-            this.currencyDataGridViewTextBoxColumn1.Name = "currencyDataGridViewTextBoxColumn1";
-            this.currencyDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ratioToTheDollarUnitDataGridViewTextBoxColumn
-            // 
-            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.DataPropertyName = "ratioToTheDollarUnit";
-            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.HeaderText = "ratioToTheDollarUnit";
-            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.Name = "ratioToTheDollarUnitDataGridViewTextBoxColumn";
-            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -369,11 +262,130 @@
             this.summDataGridViewTextBoxColumn.ReadOnly = true;
             this.summDataGridViewTextBoxColumn.Width = 62;
             // 
+            // accountingForTransactionsYMBindingSource
+            // 
+            this.accountingForTransactionsYMBindingSource.DataMember = "AccountingForTransactionsYM";
+            this.accountingForTransactionsYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.typeOperationYMBindingSource;
+            this.comboBox2.DisplayMember = "name";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(96, 92);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 32;
+            this.comboBox2.ValueMember = "id";
+            // 
+            // typeOperationYMBindingSource
+            // 
+            this.typeOperationYMBindingSource.DataMember = "typeOperationYM";
+            this.typeOperationYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Операция";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Всего (в $)";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(96, 120);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(122, 20);
+            this.textBox2.TabIndex = 33;
+            // 
+            // accountingForTransactionsYMTableAdapter
+            // 
+            this.accountingForTransactionsYMTableAdapter.ClearBeforeFill = true;
+            // 
+            // currencyYMTableAdapter
+            // 
+            this.currencyYMTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeOperationYMTableAdapter
+            // 
+            this.typeOperationYMTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.currencyDataGridViewTextBoxColumn1,
+            this.ratioToTheDollarUnitDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.courseYMBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 277);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(210, 92);
+            this.dataGridView2.TabIndex = 35;
+            this.dataGridView2.Visible = false;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // currencyDataGridViewTextBoxColumn1
+            // 
+            this.currencyDataGridViewTextBoxColumn1.DataPropertyName = "currency";
+            this.currencyDataGridViewTextBoxColumn1.HeaderText = "currency";
+            this.currencyDataGridViewTextBoxColumn1.Name = "currencyDataGridViewTextBoxColumn1";
+            this.currencyDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ratioToTheDollarUnitDataGridViewTextBoxColumn
+            // 
+            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.DataPropertyName = "ratioToTheDollarUnit";
+            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.HeaderText = "ratioToTheDollarUnit";
+            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.Name = "ratioToTheDollarUnitDataGridViewTextBoxColumn";
+            this.ratioToTheDollarUnitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseYMBindingSource
+            // 
+            this.courseYMBindingSource.DataMember = "CourseYM";
+            this.courseYMBindingSource.DataSource = this.accountingCurrencyTransactionsDataSet;
+            // 
+            // courseYMTableAdapter
+            // 
+            this.courseYMTableAdapter.ClearBeforeFill = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(5, 248);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(211, 23);
+            this.button4.TabIndex = 36;
+            this.button4.Text = "Сохранить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // AccauntingTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 381);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
@@ -393,10 +405,10 @@
             this.Text = "Учет операций";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Position_FormClosing);
             this.Load += new System.EventHandler(this.AccauntingTransaction_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountingCurrencyTransactionsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountingForTransactionsYMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencyYMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountingCurrencyTransactionsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountingForTransactionsYMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeOperationYMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseYMBindingSource)).EndInit();
@@ -442,5 +454,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn typeOperationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn summDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button4;
     }
 }

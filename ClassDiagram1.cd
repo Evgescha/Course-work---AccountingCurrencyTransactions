@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AccountingCurrencyTransactions.AccauntingTransaction">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QiAAAAACIiQgAhASAgiSAgADwhw4AAAAkHBQEIAMAAk=</HashCode>
+      <FileName>AccauntingTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.AccountingForTransactionsYMRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.AccountingForTransactionsYMRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.CourseYMDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.currencyYMRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.typeOperationYMRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.AccountingForTransactionsYMRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.AccountingForTransactionsYMDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.typeOperationYMRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.currencyYMDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.currencyYMRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.currencyYMRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.CourseYMRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.typeOperationYMRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.CourseYMRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.typeOperationYMDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSet.CourseYMRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAwAAgAZABQAAQAAACAgKQBgAAiAUAAEMBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.Course">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAACIiACAhAQAgCAAgADAgg4AAAAkHBAEIAAAAA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.Currency">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAIiAAABAAAgCAAgADAgg4AAAAkHAAAIgAAAA=</HashCode>
+      <FileName>Currency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.Main">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAiAAAACAEA4AAAAAHAIAAAAAAQ=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.Program">
+    <Position X="2.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.TypeOperation">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAIiAAABAAAgCAAAADAAg4AAAAkHAAAIgEAAE=</HashCode>
+      <FileName>TypeOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.AccountingForTransactionsYMTableAdapter">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.CourseYMTableAdapter">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.currencyYMTableAdapter">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.typeOperationYMTableAdapter">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.TableAdapterManager">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption" Collapsed="true">
+        <TypeIdentifier />
+      </Enum>
+      <Class Name="AccountingCurrencyTransactions.AccountingCurrencyTransactionsDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer" Collapsed="true">
+        <TypeIdentifier />
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEByAAAMAAiAgACgEAAAAQAAgAABAU=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.Properties.Resources">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AccountingCurrencyTransactions.Properties.Settings">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAYAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
