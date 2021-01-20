@@ -84,6 +84,7 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 27;
             this.comboBox1.ValueMember = "id";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -130,6 +131,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(122, 20);
             this.textBox1.TabIndex = 21;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_OnlyNumbers);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // label1
             // 
@@ -182,6 +185,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(730, 360);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // comboBox2
             // 
@@ -269,6 +273,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(210, 136);
             this.dataGridView2.TabIndex = 35;
+            this.dataGridView2.Visible = false;
             // 
             // courseYMBindingSource
             // 
@@ -322,6 +327,7 @@
             this.currencyDataGridViewTextBoxColumn.HeaderText = "Валюта";
             this.currencyDataGridViewTextBoxColumn.Name = "currencyDataGridViewTextBoxColumn";
             this.currencyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.currencyDataGridViewTextBoxColumn.Visible = false;
             this.currencyDataGridViewTextBoxColumn.Width = 70;
             // 
             // Column1
@@ -345,6 +351,7 @@
             this.typeOperationDataGridViewTextBoxColumn.HeaderText = "Тип операции";
             this.typeOperationDataGridViewTextBoxColumn.Name = "typeOperationDataGridViewTextBoxColumn";
             this.typeOperationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeOperationDataGridViewTextBoxColumn.Visible = false;
             this.typeOperationDataGridViewTextBoxColumn.Width = 94;
             // 
             // Column2
@@ -384,6 +391,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "AccauntingTransaction";
             this.Text = "Учет операций";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Position_FormClosing);
             this.Load += new System.EventHandler(this.AccauntingTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountingCurrencyTransactionsDataSet)).EndInit();
@@ -423,6 +431,9 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource courseYMBindingSource;
         private AccountingCurrencyTransactionsDataSetTableAdapters.CourseYMTableAdapter courseYMTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ratioToTheDollarUnitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn;
@@ -431,8 +442,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn typeOperationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn summDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currencyDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ratioToTheDollarUnitDataGridViewTextBoxColumn;
     }
 }

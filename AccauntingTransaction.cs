@@ -71,13 +71,16 @@ namespace AccountingCurrencyTransactions
             if (isFill())
                 try
                 {
-                    DataRowView row = (DataRowView)courseYMBindingSource.AddNew();
+                    DataRowView row = (DataRowView)accountingForTransactionsYMBindingSource.AddNew();
 
-                    row[1] = comboBox1.SelectedValue;
-                    row[2] = textBox1.Text;
+                    row[1] = dateTimePicker1.Value;
+                    row[2] = comboBox1.SelectedValue;
+                    row[3] = textBox1.Text;
+                    row[4] = comboBox2.SelectedValue;
+                    row[5] = textBox2.Text;
 
-                    courseYMBindingSource.EndEdit();
-                    this.courseYMTableAdapter.Update(accountingCurrencyTransactionsDataSet);
+                    accountingForTransactionsYMBindingSource.EndEdit();
+                    this.accountingForTransactionsYMTableAdapter.Update(accountingCurrencyTransactionsDataSet);
                     clearFields();
                 }
                 catch (Exception ex)
@@ -92,10 +95,14 @@ namespace AccountingCurrencyTransactions
             if (isFill())
                 try
                 {
-                    dataGridView1.CurrentRow.Cells[1].Value = comboBox1.SelectedValue;
-                    dataGridView1.CurrentRow.Cells[2].Value = textBox1.Text;
-                    courseYMBindingSource.EndEdit();
-                    this.courseYMTableAdapter.Update(((DataRowView)dataGridView1.CurrentRow.DataBoundItem).Row);
+                    dataGridView1.CurrentRow.Cells[1].Value = dateTimePicker1.Value;
+                    dataGridView1.CurrentRow.Cells[2].Value = comboBox1.SelectedValue;
+                    dataGridView1.CurrentRow.Cells[4].Value = textBox1.Text;
+                    dataGridView1.CurrentRow.Cells[5].Value = comboBox2.SelectedValue;
+                    dataGridView1.CurrentRow.Cells[7].Value = textBox2.Text;
+
+                    accountingForTransactionsYMBindingSource.EndEdit();
+                    this.accountingForTransactionsYMTableAdapter.Update(((DataRowView)dataGridView1.CurrentRow.DataBoundItem).Row);
 
                     clearFields();
                 }
@@ -114,9 +121,9 @@ namespace AccountingCurrencyTransactions
                 try
                 {
                     accountingCurrencyTransactionsDataSet.AcceptChanges();
-                    courseYMBindingSource.RemoveAt(dataGridView1.CurrentRow.Index);
-                    courseYMBindingSource.EndEdit();
-                    courseYMTableAdapter.Update(accountingCurrencyTransactionsDataSet.CourseYM);
+                    accountingForTransactionsYMBindingSource.RemoveAt(dataGridView1.CurrentRow.Index);
+                    accountingForTransactionsYMBindingSource.EndEdit();
+                    accountingForTransactionsYMTableAdapter.Update(accountingCurrencyTransactionsDataSet.AccountingForTransactionsYM);
                 }
                 catch (Exception ex)
                 {
@@ -130,8 +137,10 @@ namespace AccountingCurrencyTransactions
         {
             if (dataGridView1.Rows.Count > 0 && dataGridView1.CurrentRow != null)
             {
-                comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                comboBox1.SelectedValue = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                comboBox2.SelectedValue = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                textBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                textBox2.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             }
         }
         private void fixName()
@@ -141,11 +150,49 @@ namespace AccountingCurrencyTransactions
                 comboBox1.SelectedItem = comboBox1.Items[
                                                            currencyYMBindingSource.Find(
                                                                        "id",
-                                                                       int.Parse(dataGridView1[1, i].Value.ToString())
+                                                                       int.Parse(dataGridView1[2, i].Value.ToString())
                                                                        )
                                                            ];
                 dataGridView1[3, i].Value = comboBox1.Text;
+
+
+                comboBox2.SelectedItem = comboBox2.Items[
+                                                          typeOperationYMBindingSource.Find(
+                                                                      "id",
+                                                                      int.Parse(dataGridView1[5, i].Value.ToString())
+                                                                      )
+                                                          ];
+                dataGridView1[6, i].Value = comboBox2.Text;
             }
+        }
+        private void setSumm() {
+            textBox2.Text = "";
+            try
+            {
+                for (int i = 0; i < dataGridView2.RowCount; i++)
+                {
+                    if (dataGridView2[1, i].Value.ToString().Equals(comboBox1.SelectedValue.ToString()))
+                        {
+                        double summ = double.Parse(dataGridView2[2, i].Value.ToString()) * int.Parse(textBox1.Text);
+                        textBox2.Text = summ.ToString();
+                    }
+                }
+            } catch (Exception e) {
+                MessageBox.Show(e.ToString());
+                MessageBox.Show("Не удается преобразовать количество валюты в число \n" +
+                                "или не внесен курс отношения валюты к доллару");
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0) setSumm();
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (textBox1.Text.Length > 0) setSumm();
         }
     }
 }
