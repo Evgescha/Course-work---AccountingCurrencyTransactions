@@ -12,15 +12,27 @@ namespace AccountingCurrencyTransactions
 {
     public partial class AccauntingTransaction : Form
     {
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public AccauntingTransaction()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Метод, срабадывающий при загрузке формы на экран. Обновляет все таблицы и выпадающие списки
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Аргументы события</param>
         private void AccauntingTransaction_Load(object sender, EventArgs e)
         {
             fillGrid();
         }
+        /// <summary>
+        /// Метод, выводящий предыдущую форму при закрытии текущей
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Аргументы события</param>
         private void Position_FormClosing(object sender, FormClosingEventArgs e)
         {
             Main.main.Show();
@@ -51,6 +63,10 @@ namespace AccountingCurrencyTransactions
             this.accountingForTransactionsYMTableAdapter.Fill(this.accountingCurrencyTransactionsDataSet.AccountingForTransactionsYM);
             fixName();
         }
+        /// <summary>
+        /// Метод проверки полей на заполнение
+        /// </summary>
+        /// <returns></returns>
         private bool isFill()
         {
             if (textBox1.Text.Length < 1)
@@ -60,12 +76,21 @@ namespace AccountingCurrencyTransactions
             }
             return true;
         }
+        /// <summary>
+        /// Метод очистки полей
+        /// </summary>
         private void clearFields()
         {
             textBox1.Text = "";
             textBox2.Text = "";
         }
         //add
+        /// <summary>
+        /// Метод добавления значения а базу данных. Он получает все значения из введенных полей и выбранных выпадающий списков и вносит в новую строку таблицы
+        /// После добавление данных в таблицу идет перезагрузка таблиц и списков формы
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Аргументы события</param>
         private void button1_Click(object sender, EventArgs e)
         {
             if (isFill())
@@ -90,6 +115,12 @@ namespace AccountingCurrencyTransactions
             fillGrid();
         }
         //edit
+        /// <summary>
+        /// Метод редактирования данных в базе данных. К выбранной записи обновляются соответствующие поля, после чего ижет сохранение изменений в базе данных
+        /// После изменений обновляются все таблицы и выпадающие списки формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             if (isFill())
@@ -114,6 +145,12 @@ namespace AccountingCurrencyTransactions
         }
 
         //delete
+        /// <summary>
+        /// Метод удаления данных  из базы данных
+        /// Берется ид выбранной записи и удаляется из бд
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count > 0 && dataGridView1.CurrentRow != null)
@@ -133,6 +170,11 @@ namespace AccountingCurrencyTransactions
             }
         }
 
+        /// <summary>
+        /// Метод вывода данных выбранной записи из таблицы в формы приложения. Так, при каждом нажатии на запись в таблице, метод получает данные из нее и в каждое поле заполняется значением из соответствующего столбца.
+        /// </summary>
+        /// <param name="sender">Входящий объект</param>
+        /// <param name="e">Аргументы события</param>
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count > 0 && dataGridView1.CurrentRow != null)
@@ -143,6 +185,11 @@ namespace AccountingCurrencyTransactions
                 textBox2.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             }
         }
+        /// <summary>
+        /// Метод, исправляющий отобращение наименований из других таблиц. 
+        /// Походу в базе данных идет работа по Ид, приходится эти ИД выводить в таблицу. 
+        /// Чтобы пользвоатель понимал о чем речь, этот метод по Ид получает наименование записи в таблице и выводти его имя в таблицу
+        /// </summary>
         private void fixName()
         {
             for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -165,6 +212,9 @@ namespace AccountingCurrencyTransactions
                 dataGridView1[6, i].Value = comboBox2.Text;
             }
         }
+        /// <summary>
+        /// Расчет значения Общей суммы
+        /// </summary>
         private void setSumm() {
             textBox2.Text = "";
             try
