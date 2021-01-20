@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingCurrencyTransactions", "AccountingCurrencyTransactions.csproj", "{A55C4B92-8EFC-4CD2-A350-7E548F780789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A55C4B92-8EFC-4CD2-A350-7E548F780789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55C4B92-8EFC-4CD2-A350-7E548F780789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55C4B92-8EFC-4CD2-A350-7E548F780789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55C4B92-8EFC-4CD2-A350-7E548F780789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FAB5736-54AD-454C-A6BC-722DBC6A342A}
+	EndGlobalSection
+EndGlobal
