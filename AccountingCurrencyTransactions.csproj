@@ -46,10 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccauntingTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccauntingTransaction.Designer.cs">
+      <DependentUpon>AccauntingTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountingCurrencyTransactionsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountingCurrencyTransactionsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
     </Compile>
     <Compile Include="Currency.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,12 @@
     <Compile Include="TypeOperation.Designer.cs">
       <DependentUpon>TypeOperation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccauntingTransaction.resx">
+      <DependentUpon>AccauntingTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Currency.resx">
       <DependentUpon>Currency.cs</DependentUpon>
     </EmbeddedResource>

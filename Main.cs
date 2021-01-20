@@ -32,6 +32,19 @@ namespace AccountingCurrencyTransactions
         private void button2_Click(object sender, EventArgs e)
         {
             new TypeOperation().Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Course().Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new AccauntingTransaction().Show();
+            this.Hide();
         }
     }
 }
